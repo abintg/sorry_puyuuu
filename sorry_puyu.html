@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Puyuuu ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #090019;
+    color: white;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    background:
+        radial-gradient(circle at 50% 30%, #30105c 0%, #12002d 40%, #05000d 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    opacity: .6;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: .2; transform: scale(.7); }
+    to { opacity: 1; transform: scale(1.5); }
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.heart {
+    font-size: 55px;
+    animation: heartbeat 1.4s infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    color: #fff;
+    text-shadow: 0 0 20px #c65cff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    border: none;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #d34cff, #9d36dc);
+    box-shadow: 0 0 25px rgba(206, 69, 255, .55);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 40px rgba(206, 69, 255, .8);
+}
+
+/* CUTENESS */
+
+#cuteness {
+    display: none;
+}
+
+.loading-text {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.percent {
+    font-family: Georgia, serif;
+    font-size: 90px;
+    font-weight: bold;
+    color: #f2e8ff;
+    text-shadow: 0 0 20px #a83fff;
+}
+
+.progress {
+    height: 15px;
+    background: rgba(255,255,255,.15);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 10px 25px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #d744ff, #ef8aff);
+    box-shadow: 0 0 15px #d744ff;
+    transition: width .08s linear;
+}
+
+.warning {
+    color: #eee;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* APOLOGY */
+
+#apology {
+    display: none;
+}
+
+.section-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ffd6ff;
+}
+
+.card {
+    background: rgba(113, 53, 190, .25);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 18px;
+    padding: 22px;
+    margin: 15px 0;
+    cursor: pointer;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    backdrop-filter: blur(8px);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    background: rgba(150, 65, 220, .35);
+    box-shadow: 0 10px 30px rgba(160,60,255,.25);
+}
+
+.card .message {
+    display: none;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.card.revealed .emoji {
+    display: none;
+}
+
+.card.revealed .message {
+    display: block;
+}
+
+/* MEMORIES */
+
+#memories {
+    display: none;
+}
+
+.memory {
+    background: white;
+    color: #222;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    transform: rotate(-1deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,.4);
+}
+
+.memory:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.memory .big-heart {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.memory p {
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.final {
+    margin-top: 35px;
+}
+
+.final h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color: #ffbdf9;
+}
+
+.final p {
+    margin: 15px 0 25px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.love {
+    font-size: 65px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fade {
+    animation: fade .8s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+
+        <!-- FIRST SCREEN -->
+        <section id="home" class="fade">
+
+            <div class="heart">💗</div>
+
+            <h1>Hey Puyuuuu🐛, cutiepie</h1>
+
+            <p class="subtitle">
+                Do you even know how cute you are? 🥺
+            </p>
+
+            <button class="btn" onclick="startCuteness()">
+                Let's check 🥰
+            </button>
+
+        </section>
+
+
+        <!-- CUTENESS SCREEN -->
+        <section id="cuteness" class="fade">
+
+            <div class="heart">💞</div>
+
+            <div class="loading-text">
+                Measuring your cuteness... ⏳
+            </div>
+
+            <div class="percent" id="percent">0%</div>
+
+            <div class="progress">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+
+            <div id="warning" class="warning"></div>
+
+            <button id="continueBtn"
+                    class="btn hidden"
+                    onclick="showApology()">
+                Continue →
+            </button>
+
+        </section>
+
+
+        <!-- APOLOGY -->
+        <section id="apology" class="fade">
+
+            <div class="heart">💜</div>
+
+            <h2 class="section-title">
+                Tap each one to reveal
+            </h2>
+
+            <div class="card" onclick="reveal(this)">
+                <span class="emoji">❤️</span>
+                <span class="message">
+                    I messed up... and I'm really sorry for that. 🥺
+                </span>
+            </div>
+
+            <div class="card" onclick="reveal(this)">
+                <span class="emoji">💗</span>
+                <span class="message">
+                    I promise I'll be better for you. ❤️
+                </span>
+            </div>
+
+            <div class="card" onclick="reveal(this)">
+                <span class="emoji">💕</span>
+                <span class="message">
+                    Please forgive me... You mean so much to me. 🫶
+                </span>
+            </div>
+
+            <button class="btn" onclick="showMemories()">
+                See more →
+            </button>
+
+        </section>
+
+
+        <!-- SWEET MOMENTS -->
+        <section id="memories" class="fade">
+
+            <div class="heart">💖</div>
+
+            <h2 class="section-title">
+                Some Sweet Moments
+            </h2>
+
+            <p class="subtitle">
+                A little reminder of us ❤️
+            </p>
+
+            <div class="memory">
+                <div class="big-heart">🥺💐</div>
+                <p>
+                    I'm sorry, please forgive me.
+                    I never wanted to hurt you. 💗
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="big-heart">🫶</div>
+                <p>
+                    No matter what happens,
+                    you're still very special to me.
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="big-heart">💞</div>
+                <p>
+                    I'll try my best to understand you,
+                    respect you and make you smile.
+                </p>
+            </div>
+
+            <div class="final">
+
+                <h2>One Last Thing...</h2>
+
+                <p>
+                    Puyuuuu🐛, I know saying sorry doesn't magically
+                    fix everything. But I genuinely mean it.
+                    <br><br>
+                    I'm sorry for hurting you.
+                    I'm sorry for my mistakes.
+                    And I promise I'll learn from them.
+                    <br><br>
+                    I don't want to lose the smile that means
+                    so much to me. ❤️
+                </p>
+
+                <div class="love">❤️</div>
+
+                <p>
+                    <strong>Will you forgive me?</strong> 🥺
+                </p>
+
+                <button class="btn" onclick="forgiven()">
+                    Yes, I forgive you 💕
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+
+<script>
+
+/* CREATE STARS */
+
+const stars = document.getElementById("stars");
+
+for(let i = 0; i < 70; i++){
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.animationDelay = Math.random() * 2 + "s";
+
+    stars.appendChild(star);
+}
+
+
+/* START CUTENESS */
+
+function startCuteness(){
+
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById("cuteness").style.display = "block";
+
+    let value = 0;
+
+    const percent = document.getElementById("percent");
+    const progress = document.getElementById("progress");
+    const warning = document.getElementById("warning");
+    const continueBtn = document.getElementById("continueBtn");
+
+    const timer = setInterval(() => {
+
+        value++;
+
+        percent.innerText = value + "%";
+
+        progress.style.width = value + "%";
+
+        if(value >= 96){
+
+            clearInterval(timer);
+
+            setTimeout(() => {
+
+                warning.innerText =
+                    "⚠️ WARNING: TOO CUTE TO HANDLE";
+
+                let finalValue = 96;
+
+                const crazy = setInterval(() => {
+
+                    finalValue += 2;
+
+                    if(finalValue >= 120){
+
+                        finalValue = 120;
+
+                        clearInterval(crazy);
+
+                        continueBtn.classList.remove("hidden");
+                    }
+
+                    percent.innerText = finalValue + "%";
+
+                    progress.style.width =
+                        Math.min(finalValue,100) + "%";
+
+                }, 100);
+
+            }, 500);
+        }
+
+    }, 25);
+}
+
+
+/* REVEAL APOLOGY */
+
+function reveal(card){
+
+    card.classList.toggle("revealed");
+
+}
+
+
+/* SHOW MEMORIES */
+
+function showMemories(){
+
+    document.getElementById("apology").style.display = "none";
+
+    document.getElementById("memories").style.display = "block";
+
+}
+
+
+/* SHOW APOLOGY */
+
+function showApology(){
+
+    document.getElementById("cuteness").style.display = "none";
+
+    document.getElementById("apology").style.display = "block";
+
+}
+
+
+/* FORGIVEN */
+
+function forgiven(){
+
+    document.querySelector(".final").innerHTML = `
+
+        <div class="love">🥹❤️</div>
+
+        <h2>Thank You, Puyuuuu🐛!</h2>
+
+        <p>
+            I promise I'll never take your love for granted.
+            <br><br>
+            You are my favorite person. 💕
+            <br>
+            I love you so much. 🫶
+        </p>
+
+        <div style="font-size:45px;">
+            💗 💕 💖 💞 💓
+        </div>
+
+    `;
+
+}
+
+</script>
+
+</body>
+</html>
