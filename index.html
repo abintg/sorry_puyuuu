@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>For Puyuuuu 🐛❤️</title>
 
 <style>
 
+/* =====================================================
+   GOOGLE FONTS
+===================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =====================================================
+   BASIC
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -16,23 +28,40 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+
     font-family: 'Poppins', sans-serif;
+
     background: #090019;
+
     color: white;
+
     overflow-x: hidden;
 }
 
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
 .page {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     padding: 25px 15px;
 
     background:
+
         radial-gradient(
             circle at 50% 30%,
             #30105c 0%,
@@ -41,57 +70,88 @@ body {
         );
 
     position: relative;
+
     overflow: hidden;
 }
 
+
+/* =====================================================
+   STARS
+===================================================== */
+
 .stars {
+
     position: absolute;
+
     inset: 0;
+
     pointer-events: none;
 }
 
 .star {
+
     position: absolute;
 
     width: 3px;
+
     height: 3px;
 
     background: white;
+
     border-radius: 50%;
 
     opacity: .6;
 
-    animation: twinkle 2s infinite alternate;
+    animation:
+        twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle {
 
     from {
+
         opacity: .2;
+
         transform: scale(.7);
     }
 
     to {
+
         opacity: 1;
+
         transform: scale(1.5);
     }
-
 }
 
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
 .container {
+
     width: 100%;
+
     max-width: 500px;
 
     text-align: center;
 
     position: relative;
+
     z-index: 2;
 }
 
+
+/* =====================================================
+   HEART
+===================================================== */
+
 .heart {
+
     font-size: 55px;
 
-    animation: heartbeat 1.4s infinite;
+    animation:
+        heartbeat 1.4s infinite;
 
     margin-bottom: 15px;
 }
@@ -99,16 +159,23 @@ body {
 @keyframes heartbeat {
 
     0%,100% {
+
         transform: scale(1);
     }
 
     50% {
+
         transform: scale(1.2);
     }
-
 }
 
+
+/* =====================================================
+   HOME TITLE
+===================================================== */
+
 h1 {
+
     font-family: 'Pacifico', cursive;
 
     font-size: 42px;
@@ -122,6 +189,7 @@ h1 {
 }
 
 .subtitle {
+
     color: #ddd;
 
     font-size: 16px;
@@ -129,7 +197,13 @@ h1 {
     margin-bottom: 35px;
 }
 
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
 .btn {
+
     border: none;
 
     padding: 16px 40px;
@@ -143,6 +217,7 @@ h1 {
     color: white;
 
     background:
+
         linear-gradient(
             135deg,
             #d34cff,
@@ -163,15 +238,20 @@ h1 {
 
     box-shadow:
         0 0 40px rgba(206,69,255,.8);
+}
 
+.btn:active {
+
+    transform: scale(.96);
 }
 
 
-/* =========================
+/* =====================================================
    CUTENESS
-========================= */
+===================================================== */
 
 #cuteness {
+
     display: none;
 }
 
@@ -219,6 +299,7 @@ h1 {
     border-radius: 20px;
 
     background:
+
         linear-gradient(
             90deg,
             #d744ff,
@@ -244,11 +325,12 @@ h1 {
 }
 
 
-/* =========================
+/* =====================================================
    APOLOGY
-========================= */
+===================================================== */
 
 #apology {
+
     display: none;
 }
 
@@ -262,6 +344,11 @@ h1 {
 
     color: #ffd6ff;
 }
+
+
+/* =====================================================
+   APOLOGY CARDS
+===================================================== */
 
 .card {
 
@@ -279,7 +366,7 @@ h1 {
 
     cursor: pointer;
 
-    min-height: 75px;
+    min-height: 90px;
 
     display: flex;
 
@@ -305,6 +392,11 @@ h1 {
         rgba(160,60,255,.25);
 }
 
+.card .emoji {
+
+    font-size: 35px;
+}
+
 .card .message {
 
     display: none;
@@ -325,14 +417,19 @@ h1 {
 }
 
 
-/* =========================
+/* =====================================================
    MEMORIES
-========================= */
+===================================================== */
 
 #memories {
 
     display: none;
 }
+
+
+/* =====================================================
+   MEMORY CARD
+===================================================== */
 
 .memory {
 
@@ -342,7 +439,7 @@ h1 {
 
     border-radius: 20px;
 
-    padding: 25px;
+    padding: 20px;
 
     margin: 20px 0;
 
@@ -351,6 +448,10 @@ h1 {
     box-shadow:
         0 15px 30px
         rgba(0,0,0,.4);
+
+    overflow: hidden;
+
+    transition: .3s;
 }
 
 .memory:nth-child(even) {
@@ -359,24 +460,194 @@ h1 {
         rotate(1deg);
 }
 
-.memory .big-heart {
+.memory:hover {
 
-    font-size: 55px;
-
-    margin-bottom: 10px;
+    transform:
+        rotate(0deg)
+        translateY(-4px);
 }
+
+
+/* =====================================================
+   SINGLE MEMORY PHOTO
+===================================================== */
+
+.memory-photo {
+
+    width: 100%;
+
+    max-width: 330px;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    display: block;
+
+    margin: 0 auto 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    transition: .3s;
+}
+
+.memory-photo:hover {
+
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   PHOTO GALLERY
+===================================================== */
+
+.photo-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.photo-gallery img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.25);
+
+    transition: .3s;
+}
+
+.photo-gallery img:hover {
+
+    transform: scale(1.04);
+
+    box-shadow:
+        0 8px 25px
+        rgba(150,50,200,.35);
+}
+
+
+/* =====================================================
+   MEMORY TEXT
+===================================================== */
 
 .memory p {
 
     font-weight: 600;
 
-    line-height: 1.5;
+    line-height: 1.6;
+
+    font-size: 15px;
 }
 
 
-/* =========================
+/* =====================================================
+   PHOTO FULLSCREEN MODAL
+===================================================== */
+
+.photo-modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,.92);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.photo-modal.show {
+
+    display: flex;
+}
+
+.photo-modal img {
+
+    max-width: 95%;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 40px
+        rgba(220,100,255,.7);
+
+    animation:
+        zoomPhoto .3s ease;
+}
+
+@keyframes zoomPhoto {
+
+    from {
+
+        transform: scale(.7);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
+
+.close-modal {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    font-size: 40px;
+
+    color: white;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    z-index: 10000;
+}
+
+
+/* =====================================================
    FINAL SECTION
-========================= */
+===================================================== */
 
 .final {
 
@@ -405,9 +676,9 @@ h1 {
 }
 
 
-/* =========================
-   PUYUU PHOTO ❤️
-========================= */
+/* =====================================================
+   PUYUU PHOTO
+===================================================== */
 
 .love-photo {
 
@@ -428,14 +699,20 @@ h1 {
         rgba(255,190,255,.85);
 
     box-shadow:
+
         0 0 15px #d85cff,
+
         0 0 35px #b52cff,
-        0 0 60px rgba(210,70,255,.5);
+
+        0 0 60px
+        rgba(210,70,255,.5);
 
     animation:
         photoGlow 2s
         ease-in-out
         infinite alternate;
+
+    cursor: pointer;
 }
 
 @keyframes photoGlow {
@@ -446,8 +723,11 @@ h1 {
             scale(1);
 
         box-shadow:
+
             0 0 15px #d85cff,
+
             0 0 35px #b52cff,
+
             0 0 60px
             rgba(210,70,255,.5);
     }
@@ -458,18 +738,20 @@ h1 {
             scale(1.05);
 
         box-shadow:
+
             0 0 25px #ef8aff,
+
             0 0 50px #c43cff,
+
             0 0 80px
             rgba(210,70,255,.7);
     }
-
 }
 
 
-/* =========================
+/* =====================================================
    LOVE
-========================= */
+===================================================== */
 
 .love {
 
@@ -485,9 +767,9 @@ h1 {
 }
 
 
-/* =========================
+/* =====================================================
    FADE
-========================= */
+===================================================== */
 
 .fade {
 
@@ -512,13 +794,12 @@ h1 {
         transform:
             translateY(0);
     }
-
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:500px) {
 
@@ -544,43 +825,87 @@ h1 {
         height: 200px;
     }
 
+    .memory-photo {
+
+        height: 250px;
+    }
+
+    .photo-gallery img {
+
+        height: 150px;
+    }
+
+    .memory {
+
+        padding: 17px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media(max-width:360px) {
+
+    .photo-gallery img {
+
+        height: 125px;
+    }
+
+    .memory-photo {
+
+        height: 220px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
+<!-- =====================================================
+     MAIN PAGE
+===================================================== -->
+
 <div class="page">
 
-    <div class="stars" id="stars"></div>
+
+    <!-- STARS -->
+
+    <div
+        class="stars"
+        id="stars">
+    </div>
 
 
     <div class="container">
 
 
-        <!-- =========================
+        <!-- =================================================
              HOME
-        ========================== -->
+        ================================================== -->
 
-        <section id="home" class="fade">
+        <section
+            id="home"
+            class="fade">
 
             <div class="heart">
                 💗
             </div>
 
-
             <h1>
                 Hey Puyuuuu 🐛
             </h1>
 
-
             <p class="subtitle">
                 Do you even know how cute you are? 🥺
             </p>
-
 
             <button
                 class="btn"
@@ -594,23 +919,21 @@ h1 {
 
 
 
-        <!-- =========================
+        <!-- =================================================
              CUTENESS
-        ========================== -->
+        ================================================== -->
 
-        <section id="cuteness" class="fade">
+        <section
+            id="cuteness"
+            class="fade">
 
             <div class="heart">
                 💞
             </div>
 
-
             <div class="loading-text">
-
                 Measuring your cuteness... ⏳
-
             </div>
-
 
             <div
                 class="percent"
@@ -619,7 +942,6 @@ h1 {
                 0%
 
             </div>
-
 
             <div class="progress">
 
@@ -630,12 +952,10 @@ h1 {
 
             </div>
 
-
             <div
                 id="warning"
                 class="warning">
             </div>
-
 
             <button
                 id="continueBtn"
@@ -650,24 +970,20 @@ h1 {
 
 
 
-        <!-- =========================
+        <!-- =================================================
              APOLOGY
-        ========================== -->
+        ================================================== -->
 
         <section
             id="apology"
             class="fade">
 
-
             <div class="heart">
                 💜
             </div>
 
-
             <h2 class="section-title">
-
                 Tap each one to reveal
-
             </h2>
 
 
@@ -680,10 +996,8 @@ h1 {
                 </span>
 
                 <span class="message">
-
                     I messed up...
                     and I'm really sorry for that. 🥺
-
                 </span>
 
             </div>
@@ -698,10 +1012,8 @@ h1 {
                 </span>
 
                 <span class="message">
-
                     I promise I'll be better
                     for you. ❤️
-
                 </span>
 
             </div>
@@ -713,14 +1025,11 @@ h1 {
 
                 <span class="emoji">
                     💕
-
                 </span>
 
                 <span class="message">
-
                     Please forgive me...
                     You mean so much to me. 🫶
-
                 </span>
 
             </div>
@@ -734,14 +1043,13 @@ h1 {
 
             </button>
 
-
         </section>
 
 
 
-        <!-- =========================
+        <!-- =================================================
              SWEET MOMENTS
-        ========================== -->
+        ================================================== -->
 
         <section
             id="memories"
@@ -754,71 +1062,147 @@ h1 {
 
 
             <h2 class="section-title">
-
                 Some Sweet Moments
-
             </h2>
 
 
             <p class="subtitle">
-
                 A little reminder of us ❤️
-
             </p>
 
 
+
+            <!-- =================================================
+                 MEMORY 1
+            ================================================== -->
+
             <div class="memory">
 
-                <div class="big-heart">
-                    🥺💐
-                </div>    
+                <img
+                    src="./photo1.jpg"
+                    alt="Our memory ❤️"
+                    class="memory-photo"
+                    onclick="openPhoto(this.src)"
+                >
 
                 <p>
-
                     I'm sorry, please forgive me.
                     I never wanted to hurt you. 💗
-
                 </p>
 
             </div>
 
 
+
+            <!-- =================================================
+                 MEMORY 2
+            ================================================== -->
+
             <div class="memory">
 
-                <div class="big-heart">
-                    🫶
-                </div>
+                <img
+                    src="./photo2.jpg"
+                    alt="Our sweet memory ❤️"
+                    class="memory-photo"
+                    onclick="openPhoto(this.src)"
+                >
 
                 <p>
-
                     No matter what happens,
-                    you're still very special to me.
-
+                    you're still very special to me. 🫶
                 </p>
 
             </div>
 
+
+
+            <!-- =================================================
+                 MEMORY 3
+            ================================================== -->
 
             <div class="memory">
 
-                <div class="big-heart">
-                    💞
-                </div>
+                <img
+                    src="./photo3.jpg"
+                    alt="Our favorite memory ❤️"
+                    class="memory-photo"
+                    onclick="openPhoto(this.src)"
+                >
 
                 <p>
-
                     I'll try my best to understand you,
-                    respect you and make you smile.
-
+                    respect you and make you smile. 💕
                 </p>
 
             </div>
 
 
 
-            <!-- =========================
+            <!-- =================================================
+                 PHOTO GALLERY
+            ================================================== -->
+
+            <div class="memory">
+
+                <div class="photo-gallery">
+
+
+                    <img
+                        src="./photo1.jpg"
+                        alt="Memory 1"
+                        onclick="openPhoto(this.src)"
+                    >
+
+
+                    <img
+                        src="./photo2.jpg"
+                        alt="Memory 2"
+                        onclick="openPhoto(this.src)"
+                    >
+
+
+                    <img
+                        src="./photo3.jpg"
+                        alt="Memory 3"
+                        onclick="openPhoto(this.src)"
+                    >
+
+
+                    <img
+                        src="./photo4.jpg"
+                        alt="Memory 4"
+                        onclick="openPhoto(this.src)"
+                    >
+
+
+                    <img
+                        src="./photo5.jpg"
+                        alt="Memory 5"
+                        onclick="openPhoto(this.src)"
+                    >
+
+
+                    <img
+                        src="./photo6.jpg"
+                        alt="Memory 6"
+                        onclick="openPhoto(this.src)"
+                    >
+
+                </div>
+
+
+                <p>
+                    A few little memories that mean
+                    a lot to me. ❤️
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
                  FINAL APOLOGY
-            ========================== -->
+            ================================================== -->
 
             <div class="final">
 
@@ -840,7 +1224,9 @@ h1 {
                     <br><br>
 
                     I'm sorry for hurting you.
+
                     <br>
+
                     I'm sorry for my mistakes.
 
                     <br><br>
@@ -884,7 +1270,37 @@ h1 {
 
         </section>
 
+
     </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FULL SCREEN PHOTO VIEWER
+===================================================== -->
+
+<div
+    class="photo-modal"
+    id="photoModal"
+    onclick="closePhoto(event)">
+
+
+    <span
+        class="close-modal"
+        onclick="closePhoto()">
+
+        ×
+
+    </span>
+
+
+    <img
+        id="modalImage"
+        src=""
+        alt="Full photo"
+    >
 
 </div>
 
@@ -893,9 +1309,9 @@ h1 {
 <script>
 
 
-/* =========================
+/* =====================================================
    CREATE STARS
-========================= */
+===================================================== */
 
 const stars =
     document.getElementById("stars");
@@ -906,25 +1322,31 @@ for(let i = 0; i < 70; i++){
     const star =
         document.createElement("div");
 
-    star.className = "star";
+
+    star.className =
+        "star";
+
 
     star.style.left =
         Math.random() * 100 + "%";
 
+
     star.style.top =
         Math.random() * 100 + "%";
 
+
     star.style.animationDelay =
         Math.random() * 2 + "s";
+
 
     stars.appendChild(star);
 }
 
 
 
-/* =========================
+/* =====================================================
    START CUTENESS
-========================= */
+===================================================== */
 
 function startCuteness(){
 
@@ -958,6 +1380,7 @@ function startCuteness(){
     const timer =
         setInterval(() => {
 
+
             value++;
 
 
@@ -970,6 +1393,7 @@ function startCuteness(){
 
 
             if(value >= 96){
+
 
                 clearInterval(timer);
 
@@ -1031,9 +1455,9 @@ function startCuteness(){
 
 
 
-/* =========================
+/* =====================================================
    REVEAL APOLOGY
-========================= */
+===================================================== */
 
 function reveal(card){
 
@@ -1045,26 +1469,9 @@ function reveal(card){
 
 
 
-/* =========================
-   SHOW MEMORIES
-========================= */
-
-function showMemories(){
-
-    document.getElementById("apology")
-        .style.display = "none";
-
-
-    document.getElementById("memories")
-        .style.display = "block";
-
-}
-
-
-
-/* =========================
+/* =====================================================
    SHOW APOLOGY
-========================= */
+===================================================== */
 
 function showApology(){
 
@@ -1075,13 +1482,101 @@ function showApology(){
     document.getElementById("apology")
         .style.display = "block";
 
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
 }
 
 
 
-/* =========================
+/* =====================================================
+   SHOW MEMORIES
+===================================================== */
+
+function showMemories(){
+
+    document.getElementById("apology")
+        .style.display = "none";
+
+
+    document.getElementById("memories")
+        .style.display = "block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+
+/* =====================================================
+   OPEN PHOTO
+===================================================== */
+
+function openPhoto(src){
+
+    const modal =
+        document.getElementById("photoModal");
+
+
+    const image =
+        document.getElementById("modalImage");
+
+
+    image.src = src;
+
+
+    modal.classList.add("show");
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+
+/* =====================================================
+   CLOSE PHOTO
+===================================================== */
+
+function closePhoto(event){
+
+    if(
+        event &&
+        event.target &&
+        event.target.id !== "photoModal" &&
+        !event.target.classList.contains("close-modal")
+    ){
+
+        return;
+
+    }
+
+
+    const modal =
+        document.getElementById("photoModal");
+
+
+    modal.classList.remove("show");
+
+
+    document.body.style.overflow =
+        "auto";
+
+}
+
+
+
+/* =====================================================
    FORGIVEN ❤️
-========================= */
+===================================================== */
 
 function forgiven(){
 
@@ -1100,14 +1595,12 @@ function forgiven(){
         </h2>
 
 
-        <!-- YOUR PHOTO -->
-
-     <img
-    src="./puyuu.jpg"
-    alt="My Puyuu ❤️"
-    class="love-photo"
->
-
+        <img
+            src="./puyuu.jpg"
+            alt="My Puyuu ❤️"
+            class="love-photo"
+            onclick="openPhoto(this.src)"
+        >
 
 
         <p>
@@ -1126,7 +1619,10 @@ function forgiven(){
         </p>
 
 
-        <div style="font-size:45px;">
+        <div style="
+            font-size:45px;
+            margin:20px 0;
+        ">
 
             💗 💕 💖 💞 💓
 
@@ -1140,12 +1636,20 @@ function forgiven(){
         ">
 
             Made with all my love ❤️
+
             <br>
+
             Just for you, Puyuuuu 🐛
 
         </p>
 
     `;
+
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
 
 }
 
